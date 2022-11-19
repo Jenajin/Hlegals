@@ -1,0 +1,97 @@
+@use "../presets/variables" as *;
+
+@mixin min-xxl {
+    @media (min-width: calc($xxl - 0.2px)) {
+        @content
+    }
+}
+
+@mixin max-xxl {
+    @media (max-width: $xxl) {
+        @content
+    }
+}
+
+@mixin maxmin-xxl-xl {
+    @media ((max-width: $xxl)) and (min-width: calc($xl - 0.2px)) {
+        @content
+    }
+}
+
+@mixin min-xl {
+    @media (min-width: calc($xl - 0.2px)) {
+        @content
+    }
+}
+
+@mixin max-xl {
+    @media (max-width: $xl) {
+        @content
+    }
+}
+
+@mixin maxmin-xl-lg {
+    @media ((max-width: $xl)) and (min-width: calc($lg - 0.2px)) {
+        @content
+    }
+}
+
+@mixin min-lg {
+    @media (min-width: calc($lg - 0.2px) ) {
+        @content
+    }
+}
+
+@mixin max-lg {
+    @media (max-width: $lg) {
+        @content
+    }
+}
+
+@mixin maxmin-lg-md {
+    @media (max-width: $lg) and (min-width: $md) {
+        @content
+    }
+}
+
+@mixin maxmin-lg-sm {
+    @media (max-width: $lg) and (min-width: $sm) {
+        @content
+    }
+}
+
+@mixin min-md {
+    @media (min-width: calc($md - 0.2px)) {
+        @content
+    }
+}
+
+@mixin max-md {
+    @media (max-width: $md) {
+        @content
+    }
+}
+
+@mixin maxmin-md-sm {
+    @media (max-width: $md) and (min-width: calc($sm - 0.2px)) {
+        @content
+    }
+}
+
+@mixin min-sm {
+    @media (min-width: calc($sm - 0.2px)) {
+        @content
+    }
+}
+
+@mixin max-sm {
+    @media (max-width: $sm) {
+        @content
+    }
+}
+
+/* .wrapper {
+    @include min-lg {
+
+    }
+} */
