@@ -8,6 +8,7 @@
   "license": "1",
   "private": true,
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "normalize.css": "^8.0.1"
   }
 }

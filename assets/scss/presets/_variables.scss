@@ -1,19 +1,32 @@
-$primary-color: ;
-$secondary-color: ;
-$color-main: ;
+$color-main: #323264;
+$color-main-alt: #46466e;
+$color-main-soft: #686887;
 
-$color-light: ;
+$color-accent: #f0145a;
+
+$color-active-regular: #24a3ff;
+$color-active-hover: #0085ff;
+$color-active-active: #006ccf;
+
+$color-grey-bg: #f5f5fa;
+$color-grey-bgalt: #ededf7;
+$color-grey-text: #b3b3ba;
+$color-grey-separator: #e6e6f0;
+
+$color-black: black;
+$color-white: white;
+
+$bg-gradient-1: 42.01deg, $color-main 14%, $color-main 51%, #7A425E 87%;
 
 
-
-
-$ul: 1370px;
+$ul: 1360px;
 
 $xxl: 1400px;
-$xl: 1200px;
+$xl: 1280px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
 $gap: 20px;
 $gap-sm: 20px * 0.5;
+

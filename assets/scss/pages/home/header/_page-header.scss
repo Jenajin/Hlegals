@@ -1,0 +1,119 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.page-header {
+    background: linear-gradient($bg-gradient-1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        background-image: url(../../images/background-page-header.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 87vh;
+
+        @include abs-position;
+    }
+
+    &::after {
+        content: "";
+        background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+
+        @include abs-position (75%);
+    }
+
+    &__grid {
+        @extend %container;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        row-gap: 15px;
+
+        @include min-md {
+            padding-top: 50px;
+            grid-template-areas:
+                "logo action"
+                "logo menu";
+        }
+
+        @include max-md {
+            padding-top: 25px;
+            grid-template-areas:
+                "action action"
+                "logo menu";
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__menu {
+        grid-area: menu;
+        justify-self: end;
+
+        @include max-md {
+            display: none;
+        }
+    }
+
+    &__action {
+        grid-area: action;
+        display: flex;
+        align-items: center;
+        gap: $gap;
+
+        @include min-md {
+            justify-self: end;
+        }
+
+        @include max-md {
+            justify-content: space-between;
+
+            a {
+                color: $color-grey-text;
+            }
+        }
+    }
+
+    &__content {
+        @extend %container;
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+
+        &-image {
+            position: absolute;
+            bottom: $gap;
+            transform: scale(1.2);
+        }
+
+        &-title {
+            position: absolute;
+            z-index: 2;
+            font-size: 38px;
+            line-height: 45px;
+            text-align: center;
+            color: $color-white;
+            max-width: 500px
+        }
+    }
+
+    &__button {
+        @extend %container;
+
+        position: absolute;
+        bottom: $gap;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}

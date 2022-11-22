@@ -1,0 +1,53 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.menu {
+    &_btn {
+        color: white;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid transparent;
+        margin: 7px 0;
+        top: 50%;
+        left: 50%;
+        margin-bottom: 0;
+
+        &:focus {
+            outline-width: 0;
+          }
+
+        &-row {
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222222;
+            transition: all 0.5s;
+
+            &:nth-of-type(2) {
+                top: calc(50% - 5px);
+            }
+
+            &:nth-of-type(3) {
+                top: calc(50% + 5px);
+            }
+        }
+    }
+
+    &__list {
+        @include unlist;
+        display: flex;
+        gap: 15px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}

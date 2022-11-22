@@ -1,0 +1,45 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.action__language {
+
+    &-link {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        padding: 5px 6px;
+    }
+}
+
+.active {
+    background-color: $color-accent;
+}
+
+.action__location {
+
+    @include max-md {
+        display: none;
+    }
+
+    &-link {
+        font-weight: 400;
+        line-height: 19px;
+    }
+}
+
+.action__telephone {
+
+    &-link {
+        font-weight: 700;
+        line-height: 19px;
+    }
+}
+
+.action__social {
+    
+    @include max-md {
+        display: none;
+    }
+}
