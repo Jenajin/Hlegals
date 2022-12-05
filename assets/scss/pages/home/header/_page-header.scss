@@ -7,13 +7,15 @@
     overflow: hidden;
 
     &::before {
-        content: "";
-        background-image: url(../../images/background-page-header.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 100%;
-        background-size: 87vh;
+        @include min-md {
+            content: "";
+            background-image: url(../../images/background-page-header.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: 87vh;
 
-        @include abs-position;
+            @include abs-position;
+        }
     }
 
     &::after {
@@ -80,20 +82,41 @@
             a {
                 color: $color-grey-text;
             }
+
+            .active {
+                color: $color-white;
+            }
         }
     }
 
     &__content {
         @extend %container;
         display: flex;
-        min-height: 100vh;
         justify-content: center;
         align-items: center;
+        
+        @include max-md {
+            min-height: 640px;
+        }
+        
+        @include min-md {
+            min-height: 100vh;
+        }
+
 
         &-image {
             position: absolute;
-            bottom: $gap;
-            transform: scale(1.2);
+
+            @include min-md {
+                bottom: $gap;
+                transform: scale(1.2);
+            }
+
+            @include max-md {
+                max-height: 436px;
+                bottom: -34px;
+                transform: scale(1.1);
+            }
         }
 
         &-title {
