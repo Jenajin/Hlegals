@@ -1,0 +1,102 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.expirience {
+    background-color: $color-main;
+
+    &-container {
+        @extend %container;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.slider {
+    display: flex;
+    gap: 80px;
+
+    &__headers {
+        position: relative;
+        max-width: 527px;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            right: -42px;
+            background-color: $color-white;
+            z-index: 1;
+        }
+
+        .active {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                right: -42px;
+                background-color: $color-accent;
+                z-index: 2;
+            }
+
+            span {
+                background: linear-gradient($bg-gradient-2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+
+    &__header {
+        color: $color-grey-text;
+        font-size: 42px;
+        line-height: 50px;
+        text-align: right;
+        margin: 0;
+        position: relative;
+    }
+
+    &__notes {
+        max-width: 630px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .active {
+            display: block;
+        }
+    }
+
+    &__note {
+        display: none;
+        color: $color-white;
+
+        &-title {
+            font-size: 32px;
+            line-height: 38px;
+            margin-top: 0;
+            margin-bottom: $gap;
+        }
+
+        &-description {
+            font-size: 21px;
+            line-height: 30px;
+        }
+    }
+}
+
+
+.slider__indicators {
+    display: none;
+
+    &__indicator {}
+}

@@ -10,11 +10,11 @@
         letter-spacing: 1px;
         border-radius: 8px;
         padding: 5px 6px;
-    }
-}
 
-.active {
-    background-color: $color-accent;
+        &.active {
+            background-color: $color-accent;
+        }
+    }
 }
 
 .action__location {
@@ -38,7 +38,7 @@
 }
 
 .action__social {
-    
+
     @include max-md {
         display: none;
     }

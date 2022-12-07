@@ -165,6 +165,7 @@ template {
 [hidden] {
   display: none;
 }
+.expirience-container,
 .page-header__grid,
 .page-header__content,
 .page-header__button {
@@ -321,8 +322,7 @@ a {
   font-weight: 700;
   line-height: 14px;
 }
-
-.active {
+.action__language-link.active {
   background-color: #f0145a;
 }
 .action__location-link {
@@ -448,6 +448,123 @@ a {
   font-weight: 400;
   line-height: 21px;
 }
+
+.expirience {
+  background-color: #323264;
+}
+.expirience-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  gap: 80px;
+}
+.slider__headers {
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  max-width: 527px;
+
+  gap: 20px;
+}
+.slider__headers::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -42px;
+  bottom: 0;
+
+  width: 4px;
+
+  content: "";
+
+  background-color: white;
+}
+.slider__headers .active::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: -42px;
+  bottom: 0;
+
+  width: 4px;
+  height: 100%;
+
+  content: "";
+
+  background-color: #f0145a;
+}
+.slider__headers .active span {
+  background: -o-linear-gradient(359.87deg, #ef8080 0.84%, #f0145a 99.96%);
+  background:    linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
+.slider__header {
+  position: relative;
+
+  margin: 0;
+
+  text-align: right;
+
+  color: #b3b3ba;
+
+  font-size: 42px;
+  line-height: 50px;
+}
+.slider__notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  max-width: 630px;
+}
+.slider__notes .active {
+  display: block;
+}
+.slider__note {
+  display: none;
+
+  color: white;
+}
+.slider__note-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 32px;
+  line-height: 38px;
+}
+.slider__note-description {
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.slider__indicators {
+  display: none;
+}
+
 @media (min-width: 767.8px) {
   .page-header::before {
     position: absolute;
@@ -485,6 +602,7 @@ a {
     display: none;
   }
 }
+
 @media (max-width: 768px) {
   .page-header__grid {
     padding-top: 25px;
