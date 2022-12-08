@@ -6,14 +6,26 @@
 
     &-container {
         @extend %container;
-        padding-top: 80px;
-        padding-bottom: 80px;
+
+        @include min-lg {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @include max-lg {
+            padding-top: 40px;
+            padding-bottom: 45px;
+        }
     }
 }
 
 .slider {
     display: flex;
-    gap: 80px;
+    column-gap: 80px;
+
+    @include max-lg {
+        flex-direction: column;
+    }
 
     &__headers {
         position: relative;
@@ -22,28 +34,37 @@
         flex-direction: column;
         gap: $gap;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            right: -42px;
-            background-color: $color-white;
-            z-index: 1;
-        }
+        @include min-lg {
 
-        .active {
             &::after {
                 content: "";
                 position: absolute;
-                height: 100%;
                 top: 0;
                 bottom: 0;
                 width: 4px;
                 right: -42px;
-                background-color: $color-accent;
-                z-index: 2;
+                background-color: $color-white;
+                z-index: 1;
+            }
+        }
+
+        .active {
+            @include min-lg {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    width: 4px;
+                    right: -42px;
+                    background-color: $color-accent;
+                    z-index: 2;
+                }
+            }
+
+            @include max-lg {
+                display: block;
             }
 
             span {
@@ -58,15 +79,29 @@
 
     &__header {
         color: $color-grey-text;
-        font-size: 42px;
-        line-height: 50px;
-        text-align: right;
         margin: 0;
         position: relative;
+
+        @include min-lg {
+            font-size: 42px;
+            line-height: 50px;
+            text-align: right;
+        }
+
+        @include max-lg {
+            display: none;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
     }
 
     &__notes {
-        max-width: 630px;
+        @include min-lg {
+            max-width: 630px;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -81,22 +116,55 @@
         color: $color-white;
 
         &-title {
-            font-size: 32px;
-            line-height: 38px;
-            margin-top: 0;
+            @include min-lg {
+                font-size: 32px;
+                line-height: 38px;
+                margin-top: 0;
+            }
+
+            @include max-lg {
+                font-size: 22px;
+                line-height: 26px;
+                margin-top: $gap-sm;
+            }
+
             margin-bottom: $gap;
         }
 
         &-description {
-            font-size: 21px;
-            line-height: 30px;
+            @include max-lg {
+                line-height: 26px;
+                font-size: 18px;
+            }
+
+            @include min-lg {
+                font-size: 21px;
+                line-height: 30px;
+            }
         }
     }
 }
 
+.slider {
+    &__indicators {
+        display: flex;
+        gap: 15px;
+        margin-top: $gap;
+        justify-content: center;
+        @include min-lg {
+            display: none;
+        }
+    }
 
-.slider__indicators {
-    display: none;
+    &__indicator {
+        background: $color-active-regular;
+        opacity: 0.2;
+        width: 16px;
+        height: 16px;
+        border-radius: $gap;
 
-    &__indicator {}
+        &.active {
+            opacity: 1;
+        } 
+    }
 }
