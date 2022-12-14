@@ -1,0 +1,162 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.skills {
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    
+    @include min-xxl {
+        background: linear-gradient($bg-gradient-5);
+    }
+    
+    @include max-xxl {
+        background: linear-gradient($bg-gradient-4);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 20px;
+        top: 100%;
+        bottom: 0px;
+        right: 20px;
+        height: 10px;
+        background: $color-grey-bg-hard;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 40px;
+        top: 100%;
+        bottom: 0px;
+        right: 40px;
+        height: 20px;
+        background: $color-grey-bg-light;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    @include min-lg {
+        padding-bottom: 80px;
+    }
+
+    @include max-lg {
+        padding-bottom: 40px;
+    }
+
+    &-container {
+        @extend %container
+    }
+
+    &-services {
+        &__link {
+            color: $color-white;
+
+            span {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &-title {
+        @include text-gradient ($bg-gradient-3);
+        margin-top: 5px;
+        margin-bottom: 65px;
+
+        @include min-lg {
+            line-height: 50px;
+        }
+
+        @include max-md {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+}
+
+.skills-grid {
+    display: grid;
+
+    @include min-lg {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px 40px;
+    }
+
+    @include maxmin-lg-md {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 40px;
+    }
+
+    @include max-md {
+        grid-template-columns: 1fr;
+        gap: 40px 40px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        @include min-md {
+            gap: 16px;
+        }
+
+        @include max-md {
+            gap: 6px;
+        }
+    }
+
+    &__head {
+        display: flex;
+
+        @include min-md {
+            flex-direction: column;
+            gap: $gap;
+        }
+
+        @include max-md {
+            flex-direction: row;
+            align-items: center;
+            gap: $gap-sm;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 28px;
+            color: $color-active-regular;
+            margin: 0;
+
+            @include max-md {
+                font-size: 18px;
+                line-height: 21px;
+                align-items: center;
+            }
+        }
+
+        &-picture {
+            order: -1;
+        }
+
+        &-image {
+            @include max-md {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    &__description {
+        color: white;
+        margin: 0;
+
+        @include min-md {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @include max-md {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}

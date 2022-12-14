@@ -1,3 +1,12 @@
 @use "../mixins" as *;
 @use "../presets" as *;
 
+.link-details {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: revert;
+    gap: 2px;
+}

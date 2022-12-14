@@ -1,13 +1,23 @@
 @mixin unlist {
     list-style: none;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 @mixin abs-position ($t: 0, $r: 0, $b: 0, $l: 0) {
     position: absolute;
     top: $t;
     right: $r;
-    bottom: $b;   
+    bottom: $b;
     left: $l;
+}
+
+@mixin text-gradient ($gradient) {
+    span {
+        background: linear-gradient($gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
 }
