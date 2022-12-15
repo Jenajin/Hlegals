@@ -1,3 +1,5 @@
+@use "../presets/variables" as *;
+
 @mixin unlist {
     list-style: none;
     margin: 0;
@@ -20,4 +22,21 @@
         background-clip: text;
         text-fill-color: transparent;
     }
+}
+
+@mixin text-gradient-pt ($gradient) {
+    background: linear-gradient($gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+@mixin cases-box {
+    padding: 20px;
+    background-color: $color-grey-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
 }

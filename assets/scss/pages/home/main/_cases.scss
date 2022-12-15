@@ -1,0 +1,159 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.cases {
+    margin-bottom: 30px;
+
+    &-container {
+        @extend %container;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-main-soft;
+        margin-top: 0;
+        margin-bottom: $gap;
+
+        @include max-lg {
+            margin-bottom: $gap-sm;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &__biz {
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-grey-text;
+    }
+}
+
+.cases-upper {
+    display: flex;
+    width: 100%;
+    gap: 3px;
+    margin-bottom: 3px;
+
+    @include max-lg {
+        flex-wrap: wrap;
+    }
+
+    &__box-1 {
+        position: relative;
+        @include cases-box;
+
+        @include min-lg {
+            flex-basis: 433px;
+            min-height: 195px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+        }
+
+        &::after {
+            content: "Успішні кейси";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -57px;
+            height: 57px;
+            background-color: $color-grey-bg;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $color-accent;
+            padding: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid $color-white;
+            border-radius: 12px 0px 0px 0px;
+        }
+    }
+
+    &__box-2 {
+        @include cases-box;
+
+        @include min-lg {
+            flex-basis: 454px;
+            min-height: 255px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+        }
+    }
+
+    &__box-3 {
+        @include cases-box;
+
+        @include min-lg {
+            border-radius: 0px 12px 0px 0px;
+            flex-basis: 433px;
+            min-height: 255px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+        }
+    }
+}
+
+.cases-under {
+    display: flex;
+    width: 100%;
+    gap: 3px;
+
+    @include max-lg {
+        flex-wrap: wrap;
+    }
+
+    &__box-1 {
+        @include cases-box;
+
+        @include min-lg {
+            border-radius: 0px 0px 0px 12px;
+            flex-basis: 320px;
+            min-height: 198px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+        }
+    }
+
+    &__box-2 {
+        @include cases-box;
+
+        @include min-lg {
+            flex-basis: 453px;
+            min-height: 198px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+        }
+    }
+
+    &__box-3 {
+        @include cases-box;
+
+        @include min-lg {
+            flex-basis: 547px;
+            min-height: 198px;
+            border-radius: 0px 0px 12px 0px;
+        }
+
+        @include max-lg {
+            flex-basis: 100%;
+            min-height: 140px;
+            border-radius: 0px 0px 12px 12px;
+        }
+    }
+}

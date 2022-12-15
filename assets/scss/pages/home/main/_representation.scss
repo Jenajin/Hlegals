@@ -1,0 +1,128 @@
+@use "../../../mixins/" as *;
+@use "../../../presets" as *;
+
+.representation {
+    @include max-lg {
+        padding-top: 40px;
+        margin-bottom: 90px
+    }
+
+    @include min-lg {
+        padding-top: 60px;
+        margin-bottom: 40px
+    }
+
+    &-container {
+        @extend %container;
+    }
+}
+
+.roundabout {
+    display: flex;
+    gap: $gap * 2;
+    background-color: $color-grey-bg;
+    border-radius: 12px;
+
+    &__image {
+        @include max-lg {
+            display: none;
+        }
+    }
+
+    &__picture {
+        border-radius: 12px 0px 0px 12px;
+    }
+}
+
+.roundabout-excerption {
+    @include max-lg {
+        padding-top: $gap;
+        padding-bottom: $gap;
+    }
+
+    @include min-lg {
+        padding-top: $gap * 2;
+        padding-bottom: $gap * 2;
+    }
+
+    &__link {
+        color: $color-active-regular;
+    }
+
+    &__quote {
+        margin: 5px 0px 20px 0px;
+    }
+
+    &__title {
+        @include text-gradient-pt($bg-gradient-6);
+        font-weight: 700;
+        margin: 0;
+
+        @include max-lg {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        @include min-lg {
+            font-size: 42px;
+            line-height: 50px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__picture {
+        @include min-lg {
+            display: none;
+        }
+
+        padding-right: $gap-sm;
+    }
+
+    &__image {
+        background-blend-mode: normal, multiply, normal;
+        border-radius: 120px;
+    }
+
+    &__worker {
+        &-name {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: $color-grey-text;
+            margin-bottom: 8px;
+        }
+
+        &-post {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-grey-text;
+        }
+    }
+}
+
+.representation__slider {
+
+    &-indicators {
+        display: flex;
+        gap: 15px;
+        margin-top: $gap;
+        justify-content: center;
+    }
+
+    &-indicator {
+        background: $color-active-regular;
+        opacity: 0.2;
+        width: 16px;
+        height: 16px;
+        border-radius: $gap;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
