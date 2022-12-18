@@ -180,6 +180,15 @@ template {
   margin-inline: auto;
 }
 
+.belief {
+  width: 100%;
+  max-width: 1480px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  margin-inline: auto;
+}
+
 .link-details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,12 +778,12 @@ a {
   display: flex;
 
   width: 100%;
+  min-height: 255px;
   margin-bottom: 3px;
 
   gap: 3px;
 }
 .cases-upper__box-1 {
-  position: relative;
   position: relative;
 
   display: -webkit-box;
@@ -796,6 +805,7 @@ a {
   position: absolute;
   top: -57px;
   right: 0;
+  bottom: 0;
   left: 0;
 
   height: 57px;
@@ -815,8 +825,6 @@ a {
   line-height: 17px;
 }
 .cases-upper__box-2 {
-  position: relative;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,11 +841,11 @@ a {
   background-color: #f5f5fa;
 }
 .cases-upper__box-3 {
-  position: relative;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -846,6 +854,7 @@ a {
   -ms-flex-pack: end;
   justify-content: flex-end;
 
+  height: 100%;
   padding: 20px;
 
   background-color: #f5f5fa;
@@ -861,8 +870,6 @@ a {
   gap: 3px;
 }
 .cases-under__box-1 {
-  position: relative;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,8 +886,6 @@ a {
   background-color: #f5f5fa;
 }
 .cases-under__box-2 {
-  position: relative;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,8 +902,6 @@ a {
   background-color: #f5f5fa;
 }
 .cases-under__box-3 {
-  position: relative;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -913,6 +916,95 @@ a {
   padding: 20px;
 
   background-color: #f5f5fa;
+}
+
+.belief__reason {
+  display: block;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #323264;
+
+  font-size: 14px;
+  line-height: 17px;
+}
+.belief-grid {
+  display: grid;
+}
+.belief-grid__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.belief-grid__picture-1 {
+  background-color: #1c4280;
+
+  grid-area: pc1;
+}
+.belief-grid__picture-2 {
+  background-color: #143646;
+
+  grid-area: pc2;
+}
+.belief-grid__picture-3 {
+  background-color: #f48b30;
+
+  grid-area: pc3;
+}
+.belief-grid__picture-4 {
+  background-color: #9e4dc3;
+
+  grid-area: pc4;
+}
+.belief-grid__picture-5 {
+  background-color: #fd9339;
+
+  grid-area: pc5;
+}
+.belief-grid__picture-6 {
+  background-color: #e2e2e4;
+
+  grid-area: pc6;
+}
+.belief-grid__picture-7 {
+  background-color: #c71c36;
+
+  grid-area: pc7;
+}
+.belief-grid__picture-8 {
+  background-color: #dcf3f9;
+
+  grid-area: pc8;
+}
+.belief-grid__picture-9 {
+  background-color: #eaeaea;
+
+  grid-area: pc9;
+}
+.belief-grid__picture-10 {
+  background-color: #282240;
+
+  grid-area: pc10;
+}
+.belief-grid__picture-11 {
+  background-color: #1d4568;
+
+  grid-area: pc11;
+}
+.belief-grid__picture-12 {
+  background-color: #000000;
+
+  grid-area: pc12;
 }
 @media (min-width: 767.8px) {
   .page-header::before {
@@ -964,6 +1056,10 @@ a {
   .skills-grid__description {
     font-size: 18px;
     line-height: 26px;
+  }
+  .belief-grid__picture {
+    height: 120px;
+    margin: -0.5px;
   }
 }
 @media (min-width: 991.8px) {
@@ -1049,7 +1145,8 @@ a {
     -ms-flex-preferred-size: 433px;
     flex-basis: 433px;
 
-    min-height: 195px;
+    min-height: 198px;
+    margin-top: 57px;
   }
   .cases-upper__box-2 {
     -ms-flex-preferred-size: 454px;
@@ -1086,6 +1183,9 @@ a {
     min-height: 198px;
 
     border-radius: 0 0 12px 0;
+  }
+  .belief-grid {
+    grid-template-areas: "pc1 pc2 pc3 pc4" "pc5 pc6 pc7 pc8" "pc9 pc10 pc11 pc12";
   }
 }
 @media (min-width: 1399.8px) {
@@ -1209,6 +1309,9 @@ a {
     gap: 40px 40px;
     grid-template-columns: 1fr 1fr;
   }
+  .belief-grid {
+    grid-template-areas: "pc1 pc2 pc3" "pc4 pc5 pc6" "pc7 pc8 pc9" "pc10 pc11 pc12";
+  }
 }
 @media (max-width: 768px) {
   .page-header__grid {
@@ -1298,5 +1401,19 @@ a {
   .skills-grid__description {
     font-size: 16px;
     line-height: 22px;
+  }
+  .belief-grid {
+    grid-template-areas: "pc1 pc2" "pc3 pc4" "pc8 pc7" "pc5 pc9" "pc12 pc11" "pc10 pc6";
+  }
+  .belief-grid__picture {
+    height: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .belief-grid__image {
+    width: 80%;
+    height: 100%;
   }
 }

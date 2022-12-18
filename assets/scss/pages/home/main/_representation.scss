@@ -4,13 +4,13 @@
 .representation {
     @include max-lg {
         padding-top: 40px;
-        margin-bottom: 90px
+        margin-bottom: 90px;
     }
 
     @include min-lg {
         padding-top: 60px;
-        margin-bottom: 40px
-    }
+        margin-bottom: 40px;
+       }
 
     &-container {
         @extend %container;

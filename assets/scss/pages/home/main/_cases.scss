@@ -34,6 +34,7 @@
     width: 100%;
     gap: 3px;
     margin-bottom: 3px;
+    min-height: 255px;
 
     @include max-lg {
         flex-wrap: wrap;
@@ -45,7 +46,8 @@
 
         @include min-lg {
             flex-basis: 433px;
-            min-height: 195px;
+            min-height: 198px;
+            margin-top: 57px;
         }
 
         @include max-lg {
@@ -58,6 +60,7 @@
             position: absolute;
             left: 0;
             right: 0;
+            bottom: 0;
             top: -57px;
             height: 57px;
             background-color: $color-grey-bg;
@@ -89,6 +92,8 @@
 
     &__box-3 {
         @include cases-box;
+        height: 100%;
+        align-self: flex-end;
 
         @include min-lg {
             border-radius: 0px 12px 0px 0px;

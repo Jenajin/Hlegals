@@ -1,0 +1,132 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.belief {
+    @extend %container-max;
+
+    &__reason {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main;
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    &-grid {
+        display: grid;
+
+        @include min-lg {
+            grid-template-areas:
+                "pc1 pc2 pc3 pc4"
+                "pc5 pc6 pc7 pc8"
+                "pc9 pc10 pc11 pc12"
+        }
+
+        @include maxmin-lg-md {
+            grid-template-areas:
+                "pc1 pc2 pc3"
+                "pc4 pc5 pc6"
+                "pc7 pc8 pc9"
+                "pc10 pc11 pc12";
+        }
+
+        @include max-md {
+            grid-template-areas:
+                "pc1 pc2"
+                "pc3 pc4"
+                "pc8 pc7"
+                "pc5 pc9"
+                "pc12 pc11"
+                "pc10 pc6";
+        }
+    }
+}
+
+.belief-grid {
+    &__image {
+        @include max-sm {
+            width: 80%;
+            height: 100%;
+        }
+    }
+
+    &__picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include min-md {
+            height: 120px;
+            margin: -0.5px;
+        }
+
+        @include max-md {
+            height: 90px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__picture-1 {
+        background-color: #1c4280;
+        grid-area: pc1;
+    }
+
+    &__picture-2 {
+        background-color: #143646;
+        grid-area: pc2;
+    }
+
+    &__picture-3 {
+        background-color: #f48b30;
+        grid-area: pc3;
+    }
+
+    &__picture-4 {
+        background-color: #9e4dc3;
+        grid-area: pc4;
+    }
+
+    &__picture-5 {
+        background-color: #fd9339;
+        grid-area: pc5;
+    }
+
+    &__picture-6 {
+        background-color: #e2e2e4;
+        grid-area: pc6;
+    }
+
+    &__picture-7 {
+        background-color: #c71c36;
+        grid-area: pc7;
+    }
+
+    &__picture-8 {
+        background-color: #dcf3f9;
+        grid-area: pc8;
+    }
+
+    &__picture-9 {
+        background-color: #eaeaea;
+        grid-area: pc9;
+    }
+
+    &__picture-10 {
+        background-color: #282240;
+        grid-area: pc10;
+    }
+
+    &__picture-11 {
+        background-color: #1d4568;
+        grid-area: pc11;
+    }
+
+    &__picture-12 {
+        background-color: #000000;
+        grid-area: pc12;
+    }
+}
