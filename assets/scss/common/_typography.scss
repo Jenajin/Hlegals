@@ -19,4 +19,13 @@ body {
 a {
   text-decoration: none;
   color: $color-white;
+
+  &:hover {
+    color: $color-active-hover;
+  }
+
+  &:active {
+    color: $color-active-active;
+
+  }
 }

@@ -1,0 +1,26 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.social {
+    &__logo {
+        &-link {}
+    }
+
+    &__telephone {
+        &-link {
+            @extend %propety-link;
+            color: $color-main-alt;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__email {
+        &-link {
+            @extend %propety-link;
+            color: $color-active-regular;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
