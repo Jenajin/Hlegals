@@ -218,6 +218,14 @@ template {
   gap: 2px;
 }
 
+.strong-link {
+  display: block;
+
+  width: -webkit-max-content;
+  width:    -moz-max-content;
+  width:         max-content;
+}
+
 @font-face {
   font-family: "TT Norms";
   font-weight: bold;
@@ -1035,6 +1043,9 @@ a:active {
 }
 .publications__all-link {
   color: #24a3ff;
+}
+.publications__all:hover {
+  color: black;
 }
 .publications-title {
   margin-top: 0;

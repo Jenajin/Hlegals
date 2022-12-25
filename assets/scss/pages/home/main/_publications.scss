@@ -28,6 +28,10 @@
         &-link {
             color: $color-active-regular;
         }
+
+        &:hover {
+            color: black;
+        }
     }
 
     &-title {
