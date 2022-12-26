@@ -358,6 +358,7 @@ a:active {
 }
 .page-header__button {
   position: absolute;
+  z-index: 1;
   bottom: 20px;
   left: 50%;
 
