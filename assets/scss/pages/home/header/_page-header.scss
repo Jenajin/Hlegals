@@ -60,6 +60,7 @@
     &__menu {
         grid-area: menu;
         justify-self: end;
+        color: $color-white;
 
         @include max-md {
             display: none;
@@ -74,18 +75,12 @@
 
         @include min-md {
             justify-self: end;
+            color: $color-white;
         }
 
         @include max-md {
             justify-content: space-between;
-
-            a {
-                color: $color-grey-text;
-            }
-
-            .active {
-                color: $color-white;
-            }
+            color: $color-grey-text;
         }
     }
 

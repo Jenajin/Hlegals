@@ -1,4 +1,4 @@
-const {task, series, parallel, src, dest, watch} = require('gulp');
+const { task, series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const dc = require('postcss-discard-comments');
 const browserSync = require('browser-sync');
@@ -18,7 +18,9 @@ const PATH = {
   cssFiles: './assets/css/*.css',
   cssFile: './assets/css/style.css',
   htmlFolder: './',
+  htmlFolder: './pages/',
   htmlFiles: './*.html',
+  htmlFiles: './pages/*.html',
   jsFolder: './assets/js/',
   jsFiles: './assets/js/**/*.js',
   imgFolder: './assets/img/'
@@ -33,12 +35,12 @@ const PLUGINS = [
     ],
     cascade: true
   }),
-  mqpacker({sort: sortCSSmq})
+  mqpacker({ sort: sortCSSmq })
 ];
 
 function scss() {
   return src(PATH.scssRoot)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss(PLUGINS))
     .pipe(csscomb())
     .pipe(dest(PATH.cssFolder))
@@ -47,12 +49,12 @@ function scss() {
 function scssDev() {
   const pluginsForDevMode = [...PLUGINS]
 
-  pluginsForDevMode.splice(1,1)
+  pluginsForDevMode.splice(1, 1)
 
-  return src(PATH.scssRoot, {sourcemaps: true})
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+  return src(PATH.scssRoot, { sourcemaps: true })
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss(pluginsForDevMode))
-    .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
+    .pipe(dest(PATH.cssFolder, { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
 
@@ -64,7 +66,7 @@ function comb() {
 
 function syncInit() {
   browserSync({
-    server: {baseDir: './'},
+    server: { baseDir: './' },
     notify: false
   });
 }
@@ -98,7 +100,7 @@ function createStructure() {
   file[2] = `${PATH.jsFolder}main.js`;
   file[3] = scssFiles;
 
-  src('*.*', {read: false})
+  src('*.*', { read: false })
     .pipe(dest(PATH.scssFolder))
     .pipe(dest(PATH.cssFolder))
     .pipe(dest(PATH.jsFolder))

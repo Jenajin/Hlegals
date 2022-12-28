@@ -1,0 +1,48 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.header {
+    &__logo {
+        margin-right: 5px;
+
+        &-link {}
+
+        &-image {
+            @include max-md {
+                max-height: 30px;
+            }
+        }
+    }
+
+    &__slash {
+        &-image {
+            @include max-md {
+                max-height: 24px;
+            }
+        }
+    }
+
+    &__current-page {
+        font-weight: 400;
+        color: $color-main;
+        margin: 0px;
+
+        @include min-md {
+            font-size: 38px;
+            line-height: 45px;
+        }
+
+        @include max-md {
+            font-size: 19px;
+            line-height: 22px;
+        }
+    }
+
+    &__symbol {
+        &-image {
+            @include max-md {
+                max-height: 24px;
+            }
+        }
+    }
+}

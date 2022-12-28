@@ -13,12 +13,12 @@
 
         &.active {
             background-color: $color-accent;
+            color: $color-white;
         }
     }
 }
 
 .action__location {
-
     @include max-md {
         display: none;
     }
@@ -30,7 +30,6 @@
 }
 
 .action__telephone {
-
     &-link {
         font-weight: 700;
         line-height: 19px;
@@ -38,7 +37,6 @@
 }
 
 .action__social {
-
     @include max-md {
         display: none;
     }

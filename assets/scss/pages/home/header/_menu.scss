@@ -99,10 +99,18 @@
         @include unlist;
         display: flex;
         gap: 15px;
+        
+        .active {
+            color: $color-accent;
+            border-bottom: 2px solid $color-accent;
+            
+            &:hover {
+                border-bottom: 2px solid $color-active-hover;
+            }
+        }
 
         @include max-md {
             display: none;
-
             position: absolute;
             top: 0;
             background-color: black;

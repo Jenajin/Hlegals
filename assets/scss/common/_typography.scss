@@ -18,7 +18,8 @@ body {
 
 a {
   text-decoration: none;
-  color: $color-white;
+  color: inherit;
+  transition: 0.5s;
 
   &:hover {
     color: $color-active-hover;
@@ -26,6 +27,5 @@ a {
 
   &:active {
     color: $color-active-active;
-
   }
 }
