@@ -1,0 +1,90 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.conception {
+    @extend %container-min;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    gap: 35px 60px;
+
+    @include min-md {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    @include max-md {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+}
+
+.conception__article {
+    max-width: 640px;
+
+    &-title {
+        margin: 0;
+        @include text-gradient-pt ($bg-gradient-3);
+
+        @include min-md {
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        @include max-md {
+            rfont-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    &-description {
+        @include min-md {
+            font-size: 21px;
+            line-height: 30px;
+        }
+
+        @include max-md {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}
+
+.conception__practice {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    position: relative;
+    height: fit-content;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $color-grey-separator;
+
+        @include min-md {
+            top: 0;
+            bottom: 0;
+            left: -25px;
+            width: 4px;
+            height: 100%;
+        }
+
+        @include max-md {
+            left: 0;
+            right: 0;
+            top: -20px;
+            width: 100%;
+            height: 4px;
+        }
+    }
+
+    @include min-md {
+        row-gap: 40px;
+    }
+
+    @include max-md {
+        row-gap: $gap;
+    }
+}

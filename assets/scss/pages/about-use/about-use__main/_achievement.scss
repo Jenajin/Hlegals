@@ -1,0 +1,99 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.achievement {
+    background-color: $color-grey-bg;
+
+    &-container {
+        @extend %container-min;
+        padding-top: 28px;
+        padding-bottom: 32px;
+    }
+
+    &-title {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main;
+        margin: 0;
+    }
+}
+
+.achievement-roundabout {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include max-md {
+        gap: $gap;
+    }
+
+    &__item {
+        background-color: $color-white;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 300px;
+        min-width: 156px;
+
+        @include min-lg {
+            height: 109px;
+        }
+
+        @include maxmin-lg-md {
+            &:nth-last-child(-n+1) {
+                display: none;
+            }
+        }
+
+        @include max-md {
+            height: 57px;
+
+            &:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+    }
+}
+
+.achievement-slider__indicators {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.achievement-slider__indicator {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-color: $color-active-regular;
+    opacity: 0.2;
+    border-radius: 20px;
+
+    &:hover {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    &.active {
+        background-color: $color-active-regular;
+        opacity: 1;
+    }
+
+    @include min-lg {
+        &:nth-last-child(-n+3) {
+            display: none;
+        }
+    }
+
+    @include maxmin-lg-md {
+        &:nth-last-child(-n+2) {
+            display: none;
+        }
+    }
+}

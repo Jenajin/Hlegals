@@ -1,0 +1,52 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.team {
+    &-container {
+        @extend %container-max;
+        background-image: url(../../../../../images/page__about-use/team.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include min-md {
+            min-height: 438px;
+        }
+
+        @include max-md {
+            min-height: 290px;
+        }
+
+    }
+
+    &-title {
+        text-align: center;
+        letter-spacing: 63px;
+        text-transform: uppercase;
+        color: $color-white;
+        opacity: 0.8;
+        text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+        
+        @include min-lg {
+            font-size: 96px;
+        }
+
+        @include maxmin-lg-md {
+            font-size: 50px;
+        }
+
+        @include maxmin-md-sm {
+            font-size: 42px;
+            letter-spacing: 40px;
+        }
+
+        @include max-sm {
+            font-size: 36px;
+            letter-spacing: 20px;
+        }
+    }
+
+}

@@ -1,8 +1,6 @@
 @use "../../../mixins" as *;
 @use "../../../presets" as *;
 
-.about-use__header {}
-
 .header__grid {
     @extend %container;
     display: grid;

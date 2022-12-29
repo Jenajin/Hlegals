@@ -1,0 +1,16 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.practice__pr {
+    &-pucture {
+        margin-bottom: 5px;
+    }
+
+    &-image {}
+
+    &-description {
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-main;
+    }
+}
