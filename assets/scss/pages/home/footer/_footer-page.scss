@@ -2,7 +2,8 @@
 @use "../../../presets" as *;
 
 .page-footer {
-
+    background-color: $color-grey-bg;
+    
     &__container {
         @extend %container;
         border-top: 4px solid $color-grey-separator;
@@ -46,7 +47,6 @@
         @include max-sm {
             flex-direction: column;
         }
-
     }
 
     &__law {

@@ -1,0 +1,46 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.team-main {
+    @extend %retreat;
+}
+
+.composition {
+    &-title {
+        @extend %container;
+        max-width: 935px;
+        @include text-gradient-pt ($bg-gradient-3);
+        margin-top: 0;
+
+        @include min-md {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 80px;
+        }
+
+        @include max-md {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.composition-grid__profiles {
+    @extend %container;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 40px;
+
+    @include min-lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include maxmin-lg-sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include max-sm {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,112 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.people__main {
+    @extend %retreat;
+}
+
+.people {
+    @extend %container;
+    display: flex;
+    justify-content: center;
+    gap: 0px 40px;
+
+    @include max-md {
+        flex-direction: column;
+    }
+
+    &-picture {
+        min-height: 405px;
+        min-width: 335px;
+        max-width: 413px;
+        max-height: 500px;
+
+        @include max-md {
+            align-self: center;
+        }
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    &-container {
+        max-width: 640px;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 50px;
+        @include text-gradient-pt ($bg-gradient-3);
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.people-contact {
+    display: flex;
+    gap: $gap-sm 25px;
+    padding-bottom: 7px;
+    border-bottom: 4px solid $color-grey-separator;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+    flex-wrap: wrap;
+
+    @include min-lg {
+        margin-bottom: 40px;
+    }
+
+    @include max-sm {
+        flex-direction: column;
+        margin-bottom: $gap-sm;
+    }
+
+    &__office {
+        color: $color-grey-text;
+    }
+
+    &__email {
+        color: $color-active-regular;
+    }
+
+    &__account {
+        color: $color-active-regular;
+    }
+}
+
+.people-description {
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+        margin: 0;
+        padding-top: $gap-sm;
+    }
+
+    strong {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-main;
+    }
+
+    div {
+        @include min-lg {
+            margin-top: 30px;
+        }
+
+        @include max-lg {
+            margin-top: 20px;
+        }
+    }
+
+    &__essential {}
+
+    &__education {}
+
+    &__experience {}
+}

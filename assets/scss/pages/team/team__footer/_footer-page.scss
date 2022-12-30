@@ -1,0 +1,12 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.team__footer {
+    background-color: $color-grey-bg;
+}
+
+.page-footer {
+    &__container {
+        border-top: none;
+    }
+}

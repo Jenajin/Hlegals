@@ -101,12 +101,9 @@
         gap: 15px;
         
         .active {
+            display: block;
             color: $color-accent;
             border-bottom: 2px solid $color-accent;
-            
-            &:hover {
-                border-bottom: 2px solid $color-active-hover;
-            }
         }
 
         @include max-md {
@@ -118,10 +115,6 @@
             width: 30px;
             height: 100vh;
             padding: $gap;
-        }
-
-        &.active {
-            display: block;
         }
     }
 

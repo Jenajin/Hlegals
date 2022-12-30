@@ -8,8 +8,8 @@
 }
 
 html {
+  font-family: 'TT Norms', sans-serif;
   font-size: 16px;
-  font-family: 'TTNorms', sans-serif;
 }
 
 body {
@@ -21,7 +21,7 @@ a {
   color: inherit;
   transition: 0.5s;
 
-  &:hover {
+  &:hover:not(.active) {
     color: $color-active-hover;
   }
 

@@ -4,9 +4,7 @@
 .header {
     &__logo {
         margin-right: 5px;
-
-        &-link {}
-
+        
         &-image {
             @include max-md {
                 max-height: 30px;

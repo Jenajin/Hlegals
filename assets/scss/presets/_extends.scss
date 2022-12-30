@@ -29,3 +29,18 @@
     font-style: normal;
     font-weight: 700;
 }
+
+%retreat {
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+    @include min-md {
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    @include max-md {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
