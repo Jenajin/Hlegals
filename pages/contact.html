@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olexandr Katz</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -20,7 +20,7 @@
                 <div class="header__slash">
                     <img class="header__slash-image" src="../images/page__about-use/slash.svg" alt="slash">
                 </div>
-                <h1 class="header__current-page">команда</h1>
+                <h1 class="header__current-page">контакти</h1>
                 <div class="header__symbol">
                     <img class="header__symbol-image" src="../images/page__about-use/symbol-slash.svg"
                         alt="symbol-Long-leg">
@@ -37,9 +37,9 @@
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="about-use.html">про нас</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">послуги</a></li>
-                    <li class="menu__item"><a class="menu__link active" href="team.html">команда</a></li>
+                    <li class="menu__item"><a class="menu__link" href="team.html">команда</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">публікації</a></li>
-                    <li class="menu__item"><a class="menu__link" href="contact.html">контакти</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="#">контакти</a></li>
                 </ul>
             </nav>
 
@@ -65,51 +65,42 @@
         </div>
     </header>
 
-    <main class="people__main">
-        <section class="people">
+    <main class="contact__main">
 
-            <div class="people-picture">
-                <img class="people-image" src="../images/page__team/олександр_олександровський.png"
-                    alt="Олександр Олександровський">
+        <form class="contact-form form" action="https://tests.fomenko.top/echo/index.php">
+
+            <div class="form-container">
+                <h2 class="form-title">Ми хотіли б Вам допомогти</h2>
             </div>
 
-            <div class="people-container">
-
-                <h2 class="people-title">Олександр Кац</h2>
-
-                <div class="people-contact">
-                    <span class="people-contact__office">Керуючий партнер</span>
-                    <a class="people-contact__email" href="milti:kac@hlegals.net">kac@hlegals.net</a>
-                    <a class="people-contact__account" href="#">Профіль в LinkedIn</a>
-                </div>
-
-                <div class="people-description">
-                    <p class="people-description__essential">
-                        Олександр очолює практику міжнародної торгівлі та шиппінгу. Він спеціалізується на вирішенні
-                        спорів, пов'язаних з купівлею-продажем сировинних товарів і перевезенням товарів морем.
-                        <br>
-                        <br>
-                        Десис представляє інтереси судновласників, експедиторів, вантажовласників, морських агентів,
-                        контейнерних ліній, а також міжнародних банків і клубів P & I.
-                    </p>
-
-                    <div class="people-description__education">
-                        <strong>Освіта</strong>
-                        <p>Національний університет «Одеська юридична академія», магістр права.</p>
-                    </div>
-
-                    <div class="people-description__experience">
-                        <strong>Досвід роботи</strong>
-                        <p>До його професійного досвіду відноситься врегулювання суперечок за англійським правом і
-                            представництво інтересів в іноземних комерційних арбітражах, таких як GAFTA, FOSFA та LMAA.
-                            Данило також представляє інтереси клієнтів у державних судах України по аналогічним спорах,
-                            а також в МКАС і МАК при ТПП України</p>
-                    </div>
-                </div>
+            <div class="form-container">
+                <input class="form-date" type="text" placeholder="Iм’я">
             </div>
 
-        </section>
+            <div class="form-container">
+                <input class="form-message" type="text" placeholder="Повідомлення">
+            </div>
+
+            <div class="form-container">
+                <p class="form-question">Як вам відповісти?</p>
+            </div>
+
+            <div class="form-container">
+                <input class="form-date" type="number" placeholder="Номер телефона">
+            </div>
+
+            <div class="form-container">
+                <input class="form-date" type="email" placeholder="Чи email">
+            </div>
+
+            <div class="form-container">
+                <input class="form-btn" type="submit" value="Надіслати запит">
+            </div>
+
+        </form>
+
     </main>
+
 
     <footer class="people__footer">
         <div class="page-footer__container">
@@ -142,6 +133,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
