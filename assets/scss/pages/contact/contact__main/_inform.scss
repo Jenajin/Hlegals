@@ -1,0 +1,28 @@
+@use "../../../mixins/" as *;
+@use "../../../presets/" as *;
+
+.contact-inform {}
+
+.contact-adress {}
+
+.contact-touch {
+    &__telephone {
+        &-link {}
+    }
+
+    &__email {}
+
+    &-link {}
+}
+
+.contact-social {
+
+    &-link {
+
+        &__picture {}
+
+        &__image {}
+
+        &__text {}
+    }
+}

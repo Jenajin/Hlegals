@@ -1842,6 +1842,10 @@ a:active {
   height: 50px;
   padding: 0.5em;
 
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
   text-align: center;
 
   color: white;
@@ -1856,6 +1860,9 @@ a:active {
   line-height: 17px;
 
   margin-inline: auto;
+}
+.form-btn:hover {
+  background: #0085ff;
 }
 @media (min-width: 575.8px) {
   .profile-member {
