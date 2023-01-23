@@ -1,28 +1,64 @@
-@use "../../../mixins/" as *;
-@use "../../../presets/" as *;
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
 
-.contact-inform {}
+.contact-inform {
+    max-width: 412px;
+    width: 100%;
+}
 
-.contact-adress {}
+.contact-adress {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: $color-main-alt;
+}
 
 .contact-touch {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 4px solid $color-grey-separator;
+    border-bottom: 4px solid $color-grey-separator;
+    font-size: 21px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 400;
+
     &__telephone {
+        margin-bottom: 20px;
+        color: $color-main-alt;
+
         &-link {}
     }
 
-    &__email {}
+    &__email {
+        color: $color-active-regular;
 
-    &-link {}
+        &-link {}
+    }
+
 }
 
 .contact-social {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
 
-    &-link {
+    &__picture {}
 
-        &__picture {}
+    &__image {}
 
-        &__image {}
+    &__text {
+        font-weight: 700;
+        max-width: 123px;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-active-regular !important;
 
-        &__text {}
+        &_link {}
     }
 }

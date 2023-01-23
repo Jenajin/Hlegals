@@ -191,6 +191,7 @@ template {
   src: url("TTNorms-Regular.eot");
   src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../../../fonts/TTNorms-Regular.woff2") format("woff2"), url("../../../fonts/TTNorms-Regular.woff") format("woff");
 }
+.appeal,
 .people,
 .composition-title,
 .composition-grid__profiles,
@@ -1691,6 +1692,22 @@ a:active {
   font-size: 14px;
   line-height: 17px;
 }
+.appeal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  margin-top: 80px;
+
+  gap: 0 153px;
+}
+
 .contact-form {
   width: 527px;
   height: 588px;
@@ -1863,6 +1880,67 @@ a:active {
 }
 .form-btn:hover {
   background: #0085ff;
+}
+
+.contact-inform {
+  width: 100%;
+  max-width: 412px;
+}
+
+.contact-adress {
+  margin-bottom: 20px;
+
+  color: #46466e;
+
+  font-size: 21px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 30px;
+}
+
+.contact-touch {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  border-top: 4px solid #e6e6f0;
+  border-bottom: 4px solid #e6e6f0;
+
+  font-size: 21px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 30px;
+}
+.contact-touch__telephone {
+  margin-bottom: 20px;
+
+  color: #46466e;
+}
+.contact-touch__email {
+  color: #24a3ff;
+}
+.contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+
+  margin-top: 20px;
+
+  gap: 10px;
+}
+.contact-social__text {
+  max-width: 123px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #24a3ff !important;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
 }
 @media (min-width: 575.8px) {
   .profile-member {
