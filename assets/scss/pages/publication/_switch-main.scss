@@ -1,0 +1,30 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.switch-main {
+    width: 260px;
+    min-height: 40px;
+    background: $color-grey-separator;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__btn {
+        background: $color-grey-separator;
+        border-radius: 12px;
+        width: 128px;
+        min-height: 36px;
+        border: none;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        color: $color-main;
+        cursor: pointer;
+    }
+
+    .active {
+        background: $color-white;
+        border-radius: 10px;
+    }
+}

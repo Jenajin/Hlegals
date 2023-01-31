@@ -1,0 +1,12 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+
+.map {
+    @extend %container-max;
+    
+    &-location {
+        height: 600px;
+        width: 100%;
+    }
+}

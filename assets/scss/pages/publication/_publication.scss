@@ -1,0 +1,49 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.publication-main {
+    background-color: $color-grey-bg;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.publication {
+    @extend %container;
+
+    @include min-md {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        margin-top: 55px;
+    }
+
+    @include max-md {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    &-articles {
+        @include max-md {
+            max-height: 1975px;
+            overflow-y: hidden;
+        }
+    }
+
+    &-switch {
+        margin-inline: auto;
+        margin-bottom: 40px;
+
+        @include max-md {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &-more {
+        display: flex;
+        justify-content: center;
+
+        @include max-md {
+            margin-top: 12px;
+        }
+    }
+}

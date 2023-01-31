@@ -3,13 +3,18 @@
 
 
 .contact-form {
-    width: 527px;
-    height: 588px;
+    flex-basis: 527px;
+    min-width: 375px;
+    min-height: 588px;
     background-color: $color-grey-bg;
     padding: 0 20px 0 20px;
     border: 1px solid transparent;
-
     border-radius: 12px;
+
+    @include min-md {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
 }
 
 .form {
@@ -53,9 +58,17 @@
 
     &-title {
         margin: 0;
-        font-size: 32px;
-        line-height: 38px;
         @include text-gradient-pt ($bg-gradient-3);
+
+        @include min-lg {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        @include max-lg {
+            font-size: 22px;
+            line-height: 26px;
+        }
     }
 
     &-question {

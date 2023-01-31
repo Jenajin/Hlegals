@@ -38,7 +38,7 @@
                     <li class="menu__item"><a class="menu__link" href="about-use.html">про нас</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">послуги</a></li>
                     <li class="menu__item"><a class="menu__link" href="team.html">команда</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">публікації</a></li>
+                    <li class="menu__item"><a class="menu__link" href="puplication.html">публікації</a></li>
                     <li class="menu__item"><a class="menu__link active" href="#">контакти</a></li>
                 </ul>
             </nav>
@@ -102,11 +102,12 @@
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="text" placeholder="Iм’я">
+                    <input class="form-date" type="text" placeholder="Iм’я" maxlength="40" required>
                 </div>
 
                 <div class="form-container">
-                    <input class="form-message" type="text" placeholder="Повідомлення">
+                    <textarea class="form-message" name="text" id="text-user" placeholder="Повідомлення"
+                        maxlength="500"></textarea>
                 </div>
 
                 <div class="form-container">
@@ -114,11 +115,11 @@
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="tel" placeholder="Номер телефона">
+                    <input class="form-date" type="tel" placeholder="Номер телефона" maxlength="13" required>
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="email" placeholder="Чи email">
+                    <input class="form-date" type="email" placeholder="Чи email" maxlength="40" pattern="">
                 </div>
 
                 <div class="form-container">
@@ -126,13 +127,21 @@
                 </div>
 
             </form>
-            
+
+        </div>
+
+
+        <div class="map">
+            <iframe class="map-location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6536.238474144092!2d30.743132812695453!3d46.46554168591874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6317f18ccef07%3A0x9220496065a5bfd2!2z0J7QtNC10YHQsC3Qk9C-0LvQvtCy0L3QsA!5e0!3m2!1suk!2sua!4v1674561485730!5m2!1suk!2sua"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
     </main>
 
 
-    <footer class="people__footer">
+    <footer class="page-footer">
         <div class="page-footer__container">
 
             <div class="page-footer__wrapper">

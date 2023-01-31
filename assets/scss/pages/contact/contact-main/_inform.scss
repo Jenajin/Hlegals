@@ -2,8 +2,13 @@
 @use "../../../presets" as *;
 
 .contact-inform {
-    max-width: 412px;
-    width: 100%;
+    @include min-lg {
+        flex-basis: 412px;
+    }
+
+    @include max-lg {
+        flex-basis: 480px;
+    }
 }
 
 .contact-adress {
@@ -45,6 +50,7 @@
     display: flex;
     align-items: center;
     gap: $gap-sm;
+    margin-bottom: 40px;
 
     &__picture {}
 
@@ -58,7 +64,7 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         color: $color-active-regular !important;
-
+        
         &_link {}
     }
 }

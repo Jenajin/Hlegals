@@ -191,6 +191,7 @@ template {
   src: url("TTNorms-Regular.eot");
   src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../../../fonts/TTNorms-Regular.woff2") format("woff2"), url("../../../fonts/TTNorms-Regular.woff") format("woff");
 }
+.publication,
 .appeal,
 .people,
 .composition-title,
@@ -212,6 +213,7 @@ template {
   margin-inline: auto;
 }
 
+.map,
 .team-container,
 .belief {
   width: 100%;
@@ -274,6 +276,10 @@ template {
   width:         max-content;
 }
 
+.footer-border {
+  border-top: 4px solid #e6e6f0;
+}
+
 *,
 *::after,
 *::before {
@@ -303,6 +309,25 @@ a:hover:not(.active) {
 }
 a:active {
   color: #006ccf;
+}
+
+.btn-more {
+  width: 250px;
+  height: 50px;
+  padding: 0.5em;
+
+  cursor: pointer;
+
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background: #24a3ff;
+  -webkit-box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
 }
 
 .page-header {
@@ -1125,24 +1150,6 @@ a:active {
   background: -o-linear-gradient(top, rgba(245, 245, 250, 0) 0%, #f5f5fa 55.5%);
   background:    linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 55.5%);
 }
-.publications-grid__more-button {
-  width: 250px;
-  height: 50px;
-  padding: 0.5em;
-
-  cursor: pointer;
-
-  color: white;
-  border: none;
-  border-radius: 12px;
-  background: #24a3ff;
-  -webkit-box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-          box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-}
 
 .publications-card {
   display: -webkit-box;
@@ -1225,8 +1232,6 @@ a:active {
   min-height: 150px;
   padding-top: 30px;
   padding-bottom: 30px;
-
-  border-top: 4px solid #e6e6f0;
 
   gap: 20px;
 }
@@ -1600,14 +1605,6 @@ a:active {
   font-size: 16px;
   line-height: 22px;
 }
-.team__footer {
-  background-color: #f5f5fa;
-}
-
-.page-footer__container {
-  border-top: none;
-}
-
 .people {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1703,14 +1700,17 @@ a:active {
   -ms-flex-pack: center;
   justify-content: center;
 
-  margin-top: 80px;
-
-  gap: 0 153px;
+  -webkit-column-gap: 153px;
+     -moz-column-gap: 153px;
+          column-gap: 153px;
 }
 
 .contact-form {
-  width: 527px;
-  height: 588px;
+  -ms-flex-preferred-size: 527px;
+  flex-basis: 527px;
+
+  min-width: 375px;
+  min-height: 588px;
   padding: 0 20px 0 20px;
 
   border: 1px solid transparent;
@@ -1825,9 +1825,6 @@ a:active {
   -webkit-background-clip: text;
           background-clip: text;
 
-  font-size: 32px;
-  line-height: 38px;
-
   -webkit-text-fill-color: transparent;
           text-fill-color: transparent;
 }
@@ -1882,11 +1879,6 @@ a:active {
   background: #0085ff;
 }
 
-.contact-inform {
-  width: 100%;
-  max-width: 412px;
-}
-
 .contact-adress {
   margin-bottom: 20px;
 
@@ -1927,6 +1919,7 @@ a:active {
   -ms-flex-align: center;
 
   margin-top: 20px;
+  margin-bottom: 40px;
 
   gap: 10px;
 }
@@ -1941,6 +1934,65 @@ a:active {
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+}
+.map-location {
+  width: 100%;
+  height: 600px;
+}
+
+.publication-main {
+  border-radius: 12px 12px 0 0;
+  background-color: #f5f5fa;
+}
+.publication-switch {
+  margin-bottom: 40px;
+
+  margin-inline: auto;
+}
+.publication-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.switch-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 260px;
+  min-height: 40px;
+
+  border-radius: 12px;
+  background: #e6e6f0;
+}
+.switch-main__btn {
+  width: 128px;
+  min-height: 36px;
+
+  cursor: pointer;
+  text-align: center;
+
+  color: #323264;
+  border: none;
+  border-radius: 12px;
+  background: #e6e6f0;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+.switch-main .active {
+  border-radius: 10px;
+  background: white;
 }
 @media (min-width: 575.8px) {
   .profile-member {
@@ -2014,6 +2066,9 @@ a:active {
     height: 120px;
     margin: -0.5px;
   }
+  .publications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .header__action {
     justify-self: end;
   }
@@ -2070,6 +2125,21 @@ a:active {
 
     font-size: 42px;
     line-height: 50px;
+  }
+  .appeal {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    row-gap: 40px;
+  }
+  .contact-form {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .publication {
+    margin-top: 55px;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 }
 @media (min-width: 991.8px) {
@@ -2207,9 +2277,6 @@ a:active {
     font-size: 42px;
     line-height: 50px;
   }
-  .publications-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .publications-grid__more-button {
     margin-top: 70px;
   }
@@ -2235,6 +2302,14 @@ a:active {
   }
   .people-description div {
     margin-top: 30px;
+  }
+  .form-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .contact-inform {
+    -ms-flex-preferred-size: 412px;
+    flex-basis: 412px;
   }
 }
 @media (min-width: 1279.8px) {
@@ -2385,6 +2460,18 @@ a:active {
   .people-description div {
     margin-top: 20px;
   }
+  .appeal {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .form-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .contact-inform {
+    -ms-flex-preferred-size: 480px;
+    flex-basis: 480px;
+  }
 }
 @media (max-width: 992px) and (min-width: 576px) {
   .composition-grid__profiles {
@@ -2402,9 +2489,6 @@ a:active {
   .publications-container {
     max-height: 860px;
     padding-top: 20px;
-  }
-  .publications-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
   .publications-grid__more {
     top: 35%;
@@ -2656,6 +2740,28 @@ a:active {
   .people-picture {
     -ms-flex-item-align: center;
     align-self: center;
+  }
+  .appeal {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    row-gap: 0;
+  }
+  .publication {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .publication-articles {
+    overflow-y: hidden;
+
+    max-height: 1975px;
+  }
+  .publication-switch {
+    margin-bottom: 20px;
+  }
+  .publication-more {
+    margin-top: 12px;
   }
 }
 @media (max-width: 768px) and (min-width: 575.8px) {
