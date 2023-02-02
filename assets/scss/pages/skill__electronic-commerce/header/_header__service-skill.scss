@@ -1,0 +1,33 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.service-skill {
+    position: relative;
+    border-radius: 0px 0px 12px 12px;
+    
+    &::before {
+        content: "";
+        @include abs-position (0, 0, 0, 0);
+        background: linear-gradient($bg-gradient-8);
+        background-position: 100% 325px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    &__container {
+        position: relative;
+        min-height: 730px;
+
+        &::after {
+            content: '';
+            @include abs-position (0, 0, auto, 0);
+            min-height: 500px;
+            background: $color-main url(../../../../images/header.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 70%;
+            z-index: -1;
+        }
+    }
+}

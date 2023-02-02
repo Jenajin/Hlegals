@@ -4,11 +4,11 @@
 .skills {
     border-radius: 0px 0px 12px 12px;
     position: relative;
-    
+
     @include min-xxl {
         background: linear-gradient($bg-gradient-5);
     }
-    
+
     @include max-xxl {
         background: linear-gradient($bg-gradient-4);
     }
@@ -62,15 +62,18 @@
     &-title {
         @include text-gradient ($bg-gradient-3);
         margin-top: 5px;
-        margin-bottom: 65px;
-
-        @include min-lg {
+        
+        @include min-md {
             line-height: 50px;
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 65px;
         }
 
         @include max-md {
             font-size: 32px;
             line-height: 38px;
+            margin-bottom: $gap;
         }
     }
 }

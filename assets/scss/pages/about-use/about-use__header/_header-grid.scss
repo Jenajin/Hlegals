@@ -45,11 +45,11 @@
     gap: $gap;
     color: $color-grey-text;
 
-    @include min-md {
+    @include min-lg {
         justify-self: end;
     }
 
-    @include max-md {
+    @include max-lg {
         justify-content: space-between;
     }
 }

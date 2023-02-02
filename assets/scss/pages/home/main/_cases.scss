@@ -4,6 +4,14 @@
 .cases {
     margin-bottom: 30px;
 
+    @include min-lg {
+        margin-top: 40px;
+    }
+
+    @include max-lg {
+        margin-top: 90px;
+    }
+
     &-container {
         @extend %container;
     }

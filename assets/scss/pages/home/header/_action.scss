@@ -19,7 +19,7 @@
 }
 
 .action__location {
-    @include max-md {
+    @include max-lg {
         display: none;
     }
 
@@ -37,7 +37,7 @@
 }
 
 .action__social {
-    @include max-md {
+    @include max-lg {
         display: none;
     }
 }

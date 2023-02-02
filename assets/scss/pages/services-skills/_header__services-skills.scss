@@ -1,0 +1,19 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.header__services-skills {
+    background: $color-main;
+    min-height: 100vh;
+    border-radius: 0px 0px 12px 12px;
+
+    &-main {
+        
+        @include min-md {
+            margin-top: 75px;
+        }
+
+        @include max-md {
+            margin-top: $gap;
+        }
+    }
+}

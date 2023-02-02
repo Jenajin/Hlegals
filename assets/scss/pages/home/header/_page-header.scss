@@ -38,14 +38,14 @@
         grid-template-columns: auto 1fr;
         row-gap: 15px;
 
-        @include min-md {
+        @include min-lg {
             padding-top: 50px;
             grid-template-areas:
                 "logo action"
                 "logo menu";
         }
 
-        @include max-md {
+        @include max-lg {
             padding-top: 25px;
             grid-template-areas:
                 "action action"
@@ -62,7 +62,7 @@
         justify-self: end;
         color: $color-white;
 
-        @include max-md {
+        @include max-lg {
             display: none;
         }
     }
@@ -73,12 +73,12 @@
         align-items: center;
         gap: $gap;
 
-        @include min-md {
+        @include min-lg {
             justify-self: end;
             color: $color-white;
         }
 
-        @include max-md {
+        @include max-lg {
             justify-content: space-between;
             color: $color-grey-text;
         }

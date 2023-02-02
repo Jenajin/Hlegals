@@ -1,0 +1,77 @@
+@use "../../../mixins" as *;
+@use "../../../presets/" as *;
+
+
+.skill-article {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    max-width: 860px;
+    margin-inline: auto;
+    
+    @include min-sm {
+        @include abs-position (170px, 0, auto, 0);
+        align-items: center;
+
+    }
+
+    @include max-sm {
+        @include abs-position (140px, 0, auto, 0);
+    }
+
+    &__title {
+        margin: 0;
+        @include text-gradient-pt ($bg-gradient-6);
+        
+        @include min-md {
+            text-align: center;
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        @include max-md {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    &__description {
+        color: $color-white;
+        margin-bottom: $gap;
+
+        @include min-md {
+            font-size: 21px;
+            line-height: 30px;
+        }
+        
+        @include max-md {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        
+        @include min-sm {
+            text-align: center;
+        }
+    }
+
+    &__picture {
+        order: -1;
+        margin-bottom: $gap;
+    }
+
+    &__image {}
+
+    &__btn {
+        align-self: center;
+        border: none;
+        width: 250px;
+        min-height: 50px;
+        background: $color-active-regular;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        font-size: 14px;
+        text-align: center;
+        color: $color-white;
+        cursor: pointer;
+    }
+}

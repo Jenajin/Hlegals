@@ -11,6 +11,9 @@
         transition: .5s ease-in-out;
         cursor: pointer;
 
+        @include min-md {
+            display: none;
+        }
 
         span {
             display: block;
@@ -101,6 +104,17 @@
             display: block;
             color: $color-accent;
             border-bottom: 2px solid $color-accent;
+        }
+
+        @include max-md {
+            display: none;
+            position: absolute;
+            top: 0;
+            background-color: black;
+            right: calc(-170px - 20px);
+            width: 30px;
+            height: 100vh;
+            padding: $gap;
         }
     }
 
