@@ -19,8 +19,16 @@
 
     &__picture {
         order: -1;
-        width: 909px;
-        height: 511px;
+
+        @include min-lg {
+            width: 909px;
+            height: 511px;
+        }
+
+        @include max-lg {
+            max-width: 909px;
+            height: auto;
+        }
     }
 
     &__image {
@@ -49,8 +57,6 @@
         }
     }
 
-    
-
     &__list {
         padding-left: 30px;
     }
@@ -66,9 +72,7 @@
         }
     }
 
-    &__decription {
-        
-    }
+    &__decription {}
 
     &__text {
         font-size: 18px;
@@ -95,9 +99,24 @@
     }
 
     &__advertising {
-        width: 640px;
-        height: 400px;
         align-self: center;
+        
+        @include min-lg {
+            width: 640px;
+            height: 400px;
+        }
+
+        @include maxmin-lg-md {
+            width: 400px;
+            height: 300px;
+        }
+        
+        @include max-sm {
+            width: 375px;
+            height: 233px;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
     }
 }
 
