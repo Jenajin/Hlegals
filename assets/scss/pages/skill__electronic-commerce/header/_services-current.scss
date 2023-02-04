@@ -1,44 +1,53 @@
 @use "../../../mixins" as *;
 @use "../../../presets" as *;
 
-.current__services {
+.services-current {
     @extend %container;
     border-top: 4px solid hsla(0, 0%, 100%, 0.5);
     color: $color-white;
     padding-top: $gap;
-    padding-bottom: 70px;
     max-width: 1090px;
+    
+    @include min-sm {
+        padding-bottom: 70px;
+    }
+
+    @include max-sm {
+        padding-bottom: $gap;
+    }
 
     &::after {
-        position: absolute;
         content: "";
-        left: 20px;
-        top: 100%;
-        bottom: 0px;
-        right: 20px;
+        @include abs-position(100%, 20px, 0, 20px);
         height: 10px;
         background: $color-grey-bg-hard;
         border-radius: 0px 0px 12px 12px;
-        
     }
 
     &::before {
-        position: absolute;
         content: "";
-        left: 40px;
-        top: 100%;
-        bottom: 0px;
-        right: 40px;
+        @include abs-position(100%, 40px, 0, 40px);
         height: 20px;
         background: $color-grey-bg-light;
         border-radius: 0px 0px 12px 12px;
-       
     }
 
     &__name {
-        font-size: 24px;
-        line-height: 28px;
-        margin-bottom: $gap;
+        
+        @include min-sm {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: $gap;
+            
+        }
+
+        @include max-sm {
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: $gap-sm;
+        }
+
+
     }
 
     &__list {
@@ -48,11 +57,6 @@
         
         @include min-md {
             column-count: 2;
-
-        }
-
-        @include max-md {
-
         }
     }
 

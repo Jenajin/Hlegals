@@ -9,6 +9,7 @@
     max-width: 860px;
     margin-inline: auto;
     
+    
     @include min-sm {
         @include abs-position (170px, 0, auto, 0);
         align-items: center;

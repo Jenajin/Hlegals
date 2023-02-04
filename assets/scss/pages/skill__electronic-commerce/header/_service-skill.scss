@@ -3,8 +3,7 @@
 
 .service-skill {
     position: relative;
-    border-radius: 0px 0px 12px 12px;
-    
+
     &::before {
         content: "";
         @include abs-position (0, 0, 0, 0);
@@ -13,11 +12,16 @@
         background-size: contain;
         background-repeat: no-repeat;
         z-index: -1;
+        border-radius: 0px 0px 12px 12px;
     }
 
     &__container {
         position: relative;
         min-height: 730px;
+
+        @include max-sm {
+            min-height: 100vh;
+        }
 
         &::after {
             content: '';

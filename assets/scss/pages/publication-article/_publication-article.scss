@@ -1,0 +1,113 @@
+@use "../../mixins/" as *;
+@use "../../presets" as *;
+
+.publication-article {
+    @extend %container;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 949px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__title {
+        font-size: 32px;
+        line-height: 38px;
+        color: $color-main;
+        margin: 0 0 10px 0;
+    }
+
+    &__picture {
+        order: -1;
+        width: 909px;
+        height: 511px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__time {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-grey-text;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0px;
+            right: 0px;
+            bottom: -40px;
+            height: 4px;
+            background-color: $color-grey-separator;
+        }
+    }
+
+    
+
+    &__list {
+        padding-left: 30px;
+    }
+
+    &__item {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 20px;
+
+        &::marker {
+            font-weight: 700;
+            color: $color-accent;
+        }
+    }
+
+    &__decription {
+        
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+        margin-bottom: 0;
+    }
+
+    &__importance {
+        font-size: 42px;
+        line-height: 50px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-main;
+        margin: 0;
+    }
+
+    &__advertising {
+        width: 640px;
+        height: 400px;
+        align-self: center;
+    }
+}
+
+.publication-article__social {
+    padding-top: 30px;
+    border-top: 4px solid $color-grey-separator;
+    display: flex;
+    gap: 30px;
+
+    &-link {}
+
+    &-icon {}
+}
