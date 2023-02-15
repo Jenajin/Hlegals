@@ -61,10 +61,6 @@
         grid-area: menu;
         justify-self: end;
         color: $color-white;
-
-        @include max-lg {
-            display: none;
-        }
     }
 
     &__action {

@@ -32,10 +32,6 @@
     grid-area: menu;
     justify-self: end;
     color: $color-active-regular;
-
-    @include max-lg {
-        display: none;
-    }
 }
 
 .header__action {

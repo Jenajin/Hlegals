@@ -2,101 +2,35 @@
 @use "../../../presets" as *;
 
 .menu {
-    &_btn {
-        width: 30px;
-        height: 25px;
-        position: relative;
-        margin: 25px 0 25px auto;
-        transform: rotate(0deg);
-        transition: .5s ease-in-out;
-        cursor: pointer;
-
-
-        span {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 50%;
-            background: black;
-            opacity: 1;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-
-            &:nth-child(even) {
-                left: 50%;
-                border-radius: 0 3px 3px 0;
-            }
-
-            &:nth-child(odd) {
-                left: 0px;
-                border-radius: 3px 0 0 3px;
-            }
-
-            &:nth-child(1),
-            &:nth-child(2) {
-                top: 0px;
-            }
-
-            &:nth-child(3),
-            &:nth-child(4) {
-                top: 9px;
-            }
-
-            &:nth-child(5),
-            &:nth-child(6) {
-                top: 18px;
-            }
-        }
-
-        &.active span {
-
-            &:nth-child(1),
-            &:nth-child(6) {
-                transform: rotate(45deg);
-            }
-
-            &:nth-child(2),
-            &:nth-child(5) {
-                transform: rotate(-45deg);
-            }
-
-            &:nth-child(1) {
-                left: 2.5px;
-                top: 3.5px;
-            }
-
-            &:nth-child(2) {
-                left: calc(50% - 2.5px);
-                top: 3.5px;
-            }
-
-            &:nth-child(3) {
-                left: -50%;
-                opacity: 0;
-            }
-
-            &:nth-child(4) {
-                left: 100%;
-                opacity: 0;
-            }
-
-            &:nth-child(5) {
-                left: 2.5px;
-                top: 14.5px;
-            }
-
-            &:nth-child(6) {
-                left: calc(50% - 2.5px);
-                top: 14.5px;
-            }
-        }
-    }
-
     &__list {
         @include unlist;
         display: flex;
         gap: 15px;
-        
+
+        @include max-lg {
+            position: fixed;
+            opacity: 0;
+            z-index: -3;
+        }
+
+        &.opened {
+            opacity: 1;
+            z-index: 3;
+            right: 0;
+            transition: 0.5s;
+            display: flex;
+            min-width: 150px;
+            max-width: 250px;
+            flex-direction: column;
+            background-color: $color-main;
+
+            li {
+                padding: 15px;
+                margin: 15px;
+                text-align: center;
+            }
+        }
+
         .active {
             display: block;
             color: $color-accent;
@@ -108,5 +42,57 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
+    }
+
+    &__btn {
+        position: relative;
+        width: 50px;
+        height: 40px;
+        cursor: pointer;
+        overflow: hidden;
+        margin-right: 0;
+        margin-left: auto;
+
+        @include min-lg {
+            display: none;
+        }
+
+        span {
+            position: absolute;
+            background-color: $color-grey-text;
+            width: 40px;
+            height: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s;
+
+            &:nth-of-type(2) {
+                top: calc(50% - 10px);
+            }
+
+            &:nth-of-type(3) {
+                top: calc(50% + 10px);
+            }
+        }
+
+        &.active {
+            span {
+                &:nth-of-type(1) {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+
+                &:nth-of-type(2) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:nth-of-type(3) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
     }
 }
