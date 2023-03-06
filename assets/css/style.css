@@ -613,6 +613,8 @@ a:active {
 
   margin: 0;
 
+  cursor: pointer;
+
   color: #b3b3ba;
 }
 .slider__notes {
