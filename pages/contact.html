@@ -95,39 +95,41 @@
                 </div>
             </div>
 
-            <form class="contact-form form" action="https://tests.fomenko.top/echo/index.php">
-
+            <form class="contact-form form">
                 <div class="form-container">
                     <h2 class="form-title">Ми хотіли б Вам допомогти</h2>
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="text" placeholder="Iм’я" maxlength="40" required>
+                    <input class="form-date" type="text" name="name" placeholder="Iм’я" maxlength="40">
+                    <small></small>
                 </div>
 
                 <div class="form-container">
-                    <textarea class="form-message" name="text" id="text-user" placeholder="Повідомлення"
+                    <textarea class="form-message" name="text" name="text" id="text-user" placeholder="Повідомлення"
                         maxlength="500"></textarea>
+                    <small></small>
                 </div>
 
                 <div class="form-container">
                     <p class="form-question">Як вам відповісти?</p>
+                    <small></small>
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="tel" placeholder="Номер телефона" maxlength="13" required>
+                    <input class="form-date" type="tel" name="tel" placeholder="Номер телефона" maxlength="13">
+                    <small></small>
                 </div>
 
                 <div class="form-container">
-                    <input class="form-date" type="email" placeholder="Чи email" maxlength="40" pattern="">
+                    <input class="form-date" type="email" name="email" placeholder="Чи email" maxlength="40">
+                    <small></small>
                 </div>
 
                 <div class="form-container">
                     <input class="form-btn" type="submit" value="Надіслати запит">
                 </div>
-
             </form>
-
         </div>
 
 
@@ -173,7 +175,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>   
+    <script src="../assets/js/form.js"></script>
 
 </body>
 
