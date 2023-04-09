@@ -760,8 +760,23 @@ a:active {
 
   gap: 40px;
 }
+.roundabout__image {
+  position: relative;
+
+  width: 413px;
+  height: 500px;
+}
 .roundabout__picture {
-  border-radius: 12px 0 0 12px;
+  position: absolute;
+
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
+
+  opacity: 0;
+}
+.roundabout__picture.active {
+  opacity: 1;
 }
 .roundabout-excerption__link {
   color: #24a3ff;
@@ -783,36 +798,100 @@ a:active {
           text-fill-color: transparent;
 }
 .roundabout-excerption__wrapper {
+  position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
+
+  height: 60px;
 }
 .roundabout-excerption__picture {
+  position: relative;
+
+  width: 60px;
+  height: 60px;
   padding-right: 10px;
 }
 .roundabout-excerption__image {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
+
+  opacity: 0;
   border-radius: 120px;
 
   background-blend-mode: normal, multiply, normal;
 }
+.roundabout-excerption__image.active {
+  opacity: 1;
+}
+.roundabout-excerption__worker {
+  position: relative;
+  top: -25px;
+  left: 10px;
+}
 .roundabout-excerption__worker-name {
-  margin-bottom: 8px;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
 
+  width: -webkit-max-content;
+  width:    -moz-max-content;
+  width:         max-content;
+  height: auto;
+
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
+
+  opacity: 0;
   color: #b3b3ba;
 
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
 }
+.roundabout-excerption__worker-name.active {
+  opacity: 1;
+}
 .roundabout-excerption__worker-post {
+  position: absolute;
+  position: absolute;
+  top: 24px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+
+  width: -webkit-max-content;
+  width:    -moz-max-content;
+  width:         max-content;
+  height: auto;
+
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
+
+  opacity: 0;
   color: #b3b3ba;
 
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+.roundabout-excerption__worker-post.active {
+  opacity: 1;
 }
 
 .representation__slider-indicators {
@@ -830,6 +909,10 @@ a:active {
 .representation__slider-indicator {
   width: 16px;
   height: 16px;
+
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
 
   opacity: 0.2;
   border-radius: 20px;

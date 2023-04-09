@@ -8,7 +8,7 @@
 
     @include min-lg {
         margin-top: 60px;
-       }
+    }
 
     &-container {
         @extend %container;
@@ -22,13 +22,23 @@
     border-radius: 12px;
 
     &__image {
+        position: relative;
+        width: 413px;
+        height: 500px;
+
         @include max-lg {
             display: none;
         }
     }
 
     &__picture {
-        border-radius: 12px 0px 0px 12px;
+        position: absolute;
+        transition: 1s;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+        }
     }
 }
 
@@ -70,35 +80,72 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        position: relative;
+        height: 60px;
     }
 
     &__picture {
+        padding-right: $gap-sm;
+        position: relative;
+        width: 60px;
+        height: 60px;
+
         @include min-lg {
             display: none;
         }
-
-        padding-right: $gap-sm;
     }
 
     &__image {
+        opacity: 0;
         background-blend-mode: normal, multiply, normal;
         border-radius: 120px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+
+        &.active {
+            opacity: 1;
+        }
     }
 
     &__worker {
+        position: relative;
+        top: -25px;
+        left: 10px;
+
         &-name {
+            opacity: 0;
             font-weight: 400;
             font-size: 18px;
             line-height: 21px;
             color: $color-grey-text;
-            margin-bottom: 8px;
+            position: absolute;
+            @include abs-position (0px, 0, auto, 0px);
+            width: max-content;
+            height: auto;
+            transition: 1s;
+
+            &.active {
+                opacity: 1;
+            }
         }
 
         &-post {
+            opacity: 0;
             font-weight: 400;
             font-size: 16px;
             line-height: 22px;
             color: $color-grey-text;
+            transition: 1s;
+            position: absolute;
+            @include abs-position (24px, auto, auto, 0px);
+            width: max-content;
+            height: auto;
+
+            &.active {
+                opacity: 1;
+            }
         }
     }
 }
@@ -117,6 +164,7 @@
         width: 16px;
         height: 16px;
         border-radius: $gap;
+        transition: 1s;
 
         &.active {
             opacity: 1;
