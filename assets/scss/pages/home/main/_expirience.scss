@@ -75,10 +75,10 @@
     }
 
     &__header {
+        cursor: pointer;
         color: $color-grey-text;
         margin: 0;
         position: relative;
-        cursor: pointer;
 
         @include min-lg {
             font-size: 42px;
