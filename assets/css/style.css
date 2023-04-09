@@ -910,15 +910,20 @@ a:active {
   width: 16px;
   height: 16px;
 
-  -webkit-transition: 1s;
-       -o-transition: 1s;
-          transition: 1s;
+  cursor: pointer;
 
   opacity: 0.2;
   border-radius: 20px;
   background: #24a3ff;
 }
+.representation__slider-indicator:hover {
+  opacity: 1;
+}
 .representation__slider-indicator.active {
+  -webkit-transition: 1s;
+       -o-transition: 1s;
+          transition: 1s;
+
   opacity: 1;
 }
 

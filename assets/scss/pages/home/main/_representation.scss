@@ -164,9 +164,14 @@
         width: 16px;
         height: 16px;
         border-radius: $gap;
-        transition: 1s;
-
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 1;
+        }
+        
         &.active {
+            transition: 1s;
             opacity: 1;
         }
     }
