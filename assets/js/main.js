@@ -19,7 +19,6 @@ function slider() {
   const sliderIndicator = document.querySelectorAll('.slider__indicator')
   let couner = 0;
 
-
   function goToSlide(numb) {
     sliderNote.forEach(el => {
       el.classList.remove('active')
