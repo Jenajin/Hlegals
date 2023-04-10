@@ -181,3 +181,55 @@ function sliderSelfWorkers() {
   let interval = setInterval(nextSlide, 5000)
 }
 sliderSelfWorkers()
+
+
+
+// MORE
+function morePublication() {
+  const button = document.querySelector('.publications-grid__more-button')
+  const hide = document.querySelector('.publications-grid__more')
+  const elChangeHight = document.querySelector('.publications-grid')
+  const hFieldOfView = document.querySelector('.publications-grid').clientHeight
+  let counter = hFieldOfView
+
+  function openMorePublications() {
+    const hFull = document.querySelector('.publications-grid').scrollHeight
+   
+    window.scrollBy(
+      {
+        left: 0,
+        top: counter,
+        behavior: "smooth"
+      })
+
+    counter += 300
+    elChangeHight.style.height = counter + `px`
+
+    if (counter >= hFull) {
+      hide.style.display = "none"
+      elChangeHight.style.height = "auto"
+    }
+  }
+
+  button.addEventListener('click', () => { openMorePublications() })
+}
+morePublication()
+
+
+
+// SCROLL
+function scrollHomePage() {
+  const button = document.querySelector('.page-header__button-image')
+  const anchor = document.querySelector('section[data-action="anchor"]')
+
+  button.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    anchor.scrollIntoView({
+      behavior: 'smooth',
+      block: "start"
+    })
+
+  })
+}
+scrollHomePage()

@@ -4,6 +4,7 @@
 .skills {
     border-radius: 0px 0px 12px 12px;
     position: relative;
+    padding-top: 20px;
 
     @include min-xxl {
         background: linear-gradient($bg-gradient-5);

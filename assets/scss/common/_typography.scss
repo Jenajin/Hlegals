@@ -43,4 +43,9 @@ a {
   line-height: 17px;
   color: $color-white;
   cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $color-active-active;
+  }
 }

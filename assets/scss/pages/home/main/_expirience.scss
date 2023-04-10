@@ -12,12 +12,12 @@
 
         @include min-lg {
             padding-top: 80px;
-            padding-bottom: 80px;
+            padding-bottom: 60px;
         }
 
         @include max-lg {
             padding-top: 40px;
-            padding-bottom: 45px;
+            padding-bottom: 25px;
         }
     }
 }

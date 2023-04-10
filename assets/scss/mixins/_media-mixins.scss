@@ -55,7 +55,7 @@
 }
 
 @mixin maxmin-lg-sm {
-    @media (max-width: $lg) and (min-width: $sm) {
+    @media (max-width: calc($lg - 1px) ) and (min-width: $sm) {
         @content
     }
 }
