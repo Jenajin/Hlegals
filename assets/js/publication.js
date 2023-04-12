@@ -47,7 +47,7 @@ function companyProducts() {
         }
     }
 
-    getData('https://dummyjson.com/products?limit=3', fillProducts, publicationCompany)
+    getData('https://dummyjson.com/products?limit=6', fillProducts, publicationCompany)
 
     function createProducts(product) {
         const container = document.createElement('article')
@@ -72,21 +72,12 @@ function companyProducts() {
     }
 
     btnMore.addEventListener('click', () => {
-        skip += 3;
-        const linkMore = `https://dummyjson.com/products?skip=${skip}&limit=3`
+        skip += 6;
+        const linkMore = `https://dummyjson.com/products?skip=${skip}&limit=6`
         getData(linkMore, fillProducts, publicationCompany)
-
-
-        delayScroll = setTimeout(() => {
-            anchor.scrollIntoView({
-                behavior: 'smooth',
-                block: "end"
-            })
-        }, 500)
     })
 }
 companyProducts()
-
 
 
 
@@ -112,7 +103,6 @@ function togglePublication() {
         btnCompany.classList.add('active')
     })
 }
-
 togglePublication()
 
 
