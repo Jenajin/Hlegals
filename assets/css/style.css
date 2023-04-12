@@ -496,7 +496,7 @@ a:active {
           transition: 0.5s;
 
   opacity: 1;
-  background-color: #323264;
+  background-color: #46466e;
 }
 .menu__list.opened li {
   margin: 15px;
@@ -1227,21 +1227,28 @@ a:active {
 .publications-grid {
   position: relative;
 
-  display: grid;
+  display: none;
   overflow-y: hidden;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.publications-grid.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .publications-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 413px;
-  flex-basis: 413px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
 
+  width: 100%;
+  max-width: 413px;
   margin-bottom: 30px;
 }
 .publications-card__title {
@@ -2053,24 +2060,6 @@ a:active {
   height: 600px;
 }
 
-.publication-main {
-  border-radius: 12px 12px 0 0;
-  background-color: #f5f5fa;
-}
-.publication-switch {
-  margin-bottom: 40px;
-
-  margin-inline: auto;
-}
-.publication-more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .switch-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2098,14 +2087,95 @@ a:active {
   color: #323264;
   border: none;
   border-radius: 12px;
-  background: #e6e6f0;
 
   font-size: 18px;
   font-weight: 500;
 }
 .switch-main .active {
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
+
   border-radius: 10px;
   background: white;
+}
+
+.publication-main {
+  border-radius: 12px 12px 0 0;
+  background-color: #f5f5fa;
+}
+.publication-switch {
+  margin-bottom: 40px;
+
+  margin-inline: auto;
+}
+.publication-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.publication-company {
+  position: relative;
+
+  display: none;
+}
+.publication-company.active {
+  display: block;
+}
+
+.publication-company__products {
+  display: grid;
+
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.publication-company__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  width: 100%;
+  max-width: 413px;
+}
+.publication-company__product-title {
+  color: #24a3ff;
+
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21px;
+}
+.publication-company__product-picture {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.publication-company__product-image {
+  width: 100%;
+  height: auto;
+}
+.publication-company__product-description {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+}
+.publication-company__product-price {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.publication-company__more-bnt {
+  margin-top: auto;
+  margin-bottom: 40px;
 }
 
 .header__services-skills {
@@ -2389,6 +2459,10 @@ a:active {
 
     font-size: 42px;
     line-height: 50px;
+  }
+  .publications-grid__collumn {
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
   }
   .profile-member {
     -webkit-box-align: center;
@@ -2709,8 +2783,6 @@ a:active {
     height: 720px;
 
     gap: 40px;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
   }
   .header__grid {
     padding-top: 50px;
@@ -2900,6 +2972,9 @@ a:active {
     border-radius: 0 0 12px 12px;
   }
   .publications-grid {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
     height: 826px;
 
     gap: 20px;
@@ -2965,13 +3040,6 @@ a:active {
 }
 
 @media (max-width: 991px) and (min-width: 576px) {
-  .publications-grid__collumn {
-    display: grid;
-
-    gap: 40px;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-  }
   .composition-grid__profiles {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3161,11 +3229,6 @@ a:active {
     padding-top: 20px;
     padding-bottom: 30px;
   }
-  .publication-articles {
-    overflow-y: hidden;
-
-    max-height: 1975px;
-  }
   .publication-switch {
     margin-bottom: 20px;
   }
@@ -3203,6 +3266,10 @@ a:active {
 
     font-size: 32px;
     line-height: 38px;
+  }
+  .publications-grid__collumn {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
   }
   .publications-card__time::before {
     display: none;

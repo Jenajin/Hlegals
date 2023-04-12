@@ -194,16 +194,15 @@ function morePublication() {
 
   function openMorePublications() {
     const hFull = document.querySelector('.publications-grid').scrollHeight
-   
+    counter += 400
+    elChangeHight.style.height = counter + `px`
+
     window.scrollBy(
       {
         left: 0,
         top: counter,
         behavior: "smooth"
       })
-
-    counter += 300
-    elChangeHight.style.height = counter + `px`
 
     if (counter >= hFull) {
       hide.style.display = "none"

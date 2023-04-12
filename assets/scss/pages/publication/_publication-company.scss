@@ -1,0 +1,57 @@
+@use "../../mixins/" as *;
+@use "../../presets" as *;
+
+.publication-company {
+    position: relative;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.publication-company__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.publication-company__product {
+    display: flex;
+    flex-direction: column;
+    max-width: 413px;
+    width: 100%;
+
+    &-title {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-active-regular;
+    }
+
+    &-picture {
+        order: -1;
+    }
+
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &-description {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &-price {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.publication-company__more-bnt {
+    margin-top: auto;
+    margin-bottom: 40px;
+}

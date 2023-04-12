@@ -11,21 +11,14 @@
 
     @include min-md {
         padding-top: 40px;
-        padding-bottom: 60px;
         margin-top: 55px;
+        padding-bottom: 60px;
     }
 
     @include max-md {
         padding-top: 20px;
         padding-bottom: 30px;
         margin-top: 20px;
-    }
-
-    &-articles {
-        @include max-md {
-            max-height: 1975px;
-            overflow-y: hidden;
-        }
     }
 
     &-switch {
@@ -35,7 +28,6 @@
         @include max-md {
             margin-bottom: 20px;
         }
-
     }
 
     &-more {
